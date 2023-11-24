@@ -1,11 +1,3 @@
-/*import 'package:flutter/material.dart';
-import 'package:read_book/main1.dart';
-
-void main() {
-  runApp( MyApp());
-}
-*/
-
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -40,21 +32,16 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<void> fetchBooks() async {
-    try {
-      final response =
-          await http.get(Uri.parse('https://escribo.com/books.json'));
+    final response =
+        await http.get(Uri.parse('https://escribo.com/books.json'));
 
-      if (response.statusCode == 200) {
-        final List<dynamic> jsonData = json.decode(response.body);
-        setState(() {
-          books = jsonData.map((bookData) => Book.fromJson(bookData)).toList();
-        });
-      } else {
-        print(
-            'Falha ao carregar os dados do JSON. Código de status: ${response.statusCode}');
-      }
-    } catch (error) {
-      print('Erro ao carregar os dados do JSON: $error');
+    if (response.statusCode == 200) {
+      final List<dynamic> jsonData = json.decode(response.body);
+      setState(() {
+        books = jsonData.map((bookData) => Book.fromJson(bookData)).toList();
+      });
+    } else {
+      throw Exception('Falha ao carregar os dados do JSON');
     }
   }
 
