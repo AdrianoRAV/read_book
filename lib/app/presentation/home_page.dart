@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:read_book/app/book_details_page.dart';
+import 'package:read_book/app/data/vocsy_epub_viewer.dart';
 import 'package:read_book/app/presentation/details_page.dart';
 import 'package:read_book/app/presentation/favorites_page.dart';
 
