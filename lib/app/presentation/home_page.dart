@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:read_book/app/book_details_page.dart';
+import 'package:read_book/app/presentation/details_page.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -75,6 +76,12 @@ class _MyHomePageState extends State<MyHomePage> {
           fit: BoxFit.cover,
         ),
         onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => BookDetailsPage(book),
+            ),
+          );
           // Adicione aqui a ação que você deseja realizar ao tocar em um livro
           print('Livro selecionado: ${book.title}');
         },
