@@ -1,7 +1,9 @@
 
 # desafio_read_book_flutter
 
-APP que receba um número inteiro positivo e retorne o somatório de todos os valores inteiros divisíveis por 3 ou 5 que sejam inferiores ao número passado.
+Aplicativo para leitura de eBooks que ofereça uma experiência interativa e fácil de usar para os
+usuários. O aplicativo baixa uma lista de livros e suas capas , exibir as capas em
+uma estante virtual, permitir o download de livros e a leitura dos mesmos utilizando um plugin específico.
 
 ## 🚀 Começando
 
