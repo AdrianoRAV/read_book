@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:read_book/app/presentation/home_page.dart';
 import 'package:read_book/app/presentation/splash.dart';
 
 void main() => runApp(MyApp());

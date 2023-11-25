@@ -43,7 +43,6 @@ class BookDetailsPage extends StatelessWidget {
       String appDocPath = appDocDir.path;
       String savePath = '$appDocPath/$bookTitle.epub';
 
-      // Verificar se o diretório de download existe, senão criar
       if (!await Directory(appDocPath).exists()) {
         await Directory(appDocPath).create(recursive: true);
       }
@@ -86,7 +85,6 @@ class BookDetailsPage extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // Adicione a lógica para abrir o leitor de EPUB aqui
                     print('Abrir Leitor: ${book.title}');
                   },
                   child: Text('Ler'),
