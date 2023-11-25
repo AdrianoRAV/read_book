@@ -31,10 +31,12 @@ dependencies:
   flutter:
     sdk: flutter
   dio: ^5.3.4
-  vocsy_epub_viewer: ^2.0.0
+ # vocsy_epub_viewer: ^2.0.0
   shared_preferences: ^2.2.2
-  http: ^1.1.0
+  http: ^0.13.6
   url_launcher: ^6.2.1
+  
+  
 
 
   # The following adds the Cupertino Icons font to your application.
