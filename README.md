@@ -1,10 +1,9 @@
 
-# desafio_read_book_flutter
+# Read_book
 
 Aplicativo para leitura de eBooks que ofereça uma experiência interativa e fácil de usar para os
-usuários. O aplicativo baixa uma lista de livros e suas capas , exibir as capas em
-uma estante virtual, permitir o download de livros e a leitura dos mesmos utilizando um plugin específico.
-
+usuários. O aplicativo baixa uma lista de livros e suas capas , exibi as capas em
+uma estante virtual, permitir o download de livros e a leitura dos mesmos.
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
@@ -25,11 +24,11 @@ https://flutter.dev/docs/get-started/install
 Clone este repositório.
 
 ```[
-git clone https://github.com/AdrianoRAV/desafio_flutter.git
+git clone https://github.com/AdrianoRAV/read_book.git
 ```
 Navegue até o diretório do projeto.
 
-cd desafio_read_book_flutter
+cd read_book
 
 ## 🔧 Como Rodar
 
@@ -40,13 +39,7 @@ flutter pub get
 
 flutter run
 
-### ⌨️ Testes para codificação
 
-
-
-```
-
-```
 
 ## 🛠️ Construído com
 
