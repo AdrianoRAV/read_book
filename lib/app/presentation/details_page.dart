@@ -1,15 +1,19 @@
+import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
-import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 import 'package:read_book/app/book_details_page.dart';
+import 'package:vocsy_epub_viewer/epub_viewer.dart';
 
 class BookDetailsPage extends StatelessWidget {
   final Book book;
 
   BookDetailsPage(this.book);
 
-  Future<void> _downloadBook() async {
+  Future<void> _downloadBook(BuildContext context) async {
     Dio dio = Dio();
 
     try {
@@ -24,7 +28,12 @@ class BookDetailsPage extends StatelessWidget {
             print('Received: $received, Total: $total');
           },
         );
-        print('Download completo: $response');
+
+        if (response.statusCode == 200) {
+          await _openEpubViewer(context, savePath);
+        } else {
+          print('Erro ao baixar o arquivo EPUB: ${response.statusMessage}');
+        }
       } else {
         print('Erro: Diretório externo nulo');
       }
@@ -33,25 +42,41 @@ class BookDetailsPage extends StatelessWidget {
     }
   }
 
-  Future<String> getDownloadDirectory(String bookTitle) async {
+  Future<void> _openEpubViewer(BuildContext context, String filePath) async {
     try {
-      Directory? appDocDir = await getExternalStorageDirectory();
-      if (appDocDir == null) {
-        throw 'Não foi possível obter o diretório externo de armazenamento.';
-      }
+      VocsyEpub.setConfig(
+        themeColor: Theme.of(context).primaryColor,
+        identifier: "bookReader",
+        scrollDirection: EpubScrollDirection.ALLDIRECTIONS,
+        allowSharing: true,
+        enableTts: true,
+        nightMode: true,
+      );
 
-      String appDocPath = appDocDir.path;
-      String savePath = '$appDocPath/$bookTitle.epub';
+      VocsyEpub.locatorStream.listen((locator) {
+        print('LOCATOR: ${EpubLocator.fromJson(jsonDecode(locator))}');
+        // convert locator from string to json and save to your database to be retrieved later
+      });
 
-      // Verificar se o diretório de download existe, senão criar
-      if (!await Directory(appDocPath).exists()) {
-        await Directory(appDocPath).create(recursive: true);
-      }
+      Completer<void> completer = Completer<void>();
 
-      return savePath;
+      VocsyEpub.open(
+        filePath,
+        lastLocation: EpubLocator.fromJson({
+          "bookId": "2239",
+          "href": "/OEBPS/ch06.xhtml",
+          "created": 1539934158390,
+          "locations": {"cfi": "epubcfi(/0!/4/4[simple_book]/2/2/6)"},
+        }),
+      );
+
+      VocsyEpub.locatorStream.first.then((locator) {
+        completer.complete();
+      });
+
+      await completer.future;
     } catch (e) {
-      print('Erro ao obter diretório de download: $e');
-      throw e;
+      print('Erro ao abrir o leitor EPUB: $e');
     }
   }
 
@@ -81,7 +106,7 @@ class BookDetailsPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
-                  onPressed: _downloadBook,
+                  onPressed: () => _downloadBook(context),
                   child: Text('Download'),
                 ),
                 ElevatedButton(
