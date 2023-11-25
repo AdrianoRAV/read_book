@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:read_book/app/book_details_page.dart';
-import 'package:read_book/app/business/book_manager.dart';
+import 'package:read_book/app/presentation/details_page.dart';
 
 class FavoritesPage extends StatelessWidget {
   final List<Book> books;
@@ -38,6 +38,7 @@ class FavoritesPage extends StatelessWidget {
             ),
             onTap: () {
               BookDetailsPage(book);
+              print('Livro selecionado: ${book.title}');
             },
           );
         },
