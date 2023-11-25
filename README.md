@@ -42,7 +42,7 @@ flutter run
 
 ### ⌨️ Testes para codificação
 
-Digite um inteiro positivo e  retornara o resultado do somatório dos números inferiores divisiveis por 3 ou 5 .
+
 
 ```
 
