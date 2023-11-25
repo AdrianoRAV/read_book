@@ -28,6 +28,8 @@ class Book {
   }
 }
 
+
+
 class FavoriteManager {
   static List<Book> favorites = [];
 

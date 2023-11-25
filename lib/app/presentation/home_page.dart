@@ -258,12 +258,6 @@ class _MyHomePageState extends State<MyHomePage> {
           },
         ),
         onTap: () {
-          /* Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => BookDetailsPage(book),
-            ),
-          );*/
           BookDetailsPage(book);
           print('Livro selecionado: ${book.title}');
         },
