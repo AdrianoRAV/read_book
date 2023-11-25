@@ -1,53 +1,56 @@
-
 # Read_book
 
-Aplicativo para leitura de eBooks que ofereça uma experiência interativa e fácil de usar para os
-usuários. O aplicativo baixa uma lista de livros e suas capas , exibi as capas em
-uma estante virtual, permitir o download de livros e a leitura dos mesmos.
+Um aplicativo para leitura de eBooks que oferece uma experiência interativa e fácil de usar para os usuários. O aplicativo baixa uma lista de livros e suas capas, exibe as capas em uma estante virtual, permite o download de livros e a leitura dos mesmos.
+
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-
 ### 📋 Pré-requisitos
 
-Certifique-se de ter o Flutter e o Dart SDK instalados em seu sistema. Você pode seguir as instruções em [flutter.dev](https://flutter.dev/docs/get-started/install) para instalar o Flutter.
-```
-https://dart.dev/get-dart
-```
-```
-https://flutter.dev/docs/get-started/install
-```
+Certifique-se de ter o Flutter e o Dart SDK instalados em seu sistema. Siga as instruções em [flutter.dev](https://flutter.dev/docs/get-started/install) para instalar o Flutter.
 
-### ⚙️ Configuração do Ambente
+- [Instalação do Dart](https://dart.dev/get-dart)
+- [Instalação do Flutter](https://flutter.dev/docs/get-started/install)
 
-Clone este repositório.
+### ⚙️ Configuração do Ambiente
 
-```[
-git clone https://github.com/AdrianoRAV/read_book.git
-```
-Navegue até o diretório do projeto.
+1. **Clone este repositório:**
 
-cd read_book
+    ```bash
+    git clone https://github.com/AdrianoRAV/read_book.git
+    ```
+
+2. **Navegue até o diretório do projeto:**
+
+    ```bash
+    cd read_book
+    ```
 
 ## 🔧 Como Rodar
 
-Abra um terminal no diretório do projeto.
-Execute o seguinte comando para obter as dependências do projeto.
+1. **Abra um terminal no diretório do projeto.**
+2. **Execute o seguinte comando para obter as dependências do projeto:**
 
-flutter pub get
+    ```bash
+    flutter pub get
+    ```
 
-flutter run
+3. **Execute o aplicativo:**
 
-
+    ```bash
+    flutter run
+    ```
 
 ## 🛠️ Construído com
 
-* [Flutter](https://docs.flutter.dev/) - Framework usado
-* [Dart](https://dart.dev/guides) - Linguagem de programação usada
+- [Flutter](https://docs.flutter.dev/) - Framework utilizado
+- [Dart](https://dart.dev/guides) - Linguagem de programação utilizada
 
+## ✒️ Autor
 
-## ✒️ Autores
+- **Adriano Rodrigues** - *Trabalho Inicial* - [Adriano](https://github.com/AdrianoRAV)
 
-* **Adriano Rodrigues** - *Trabalho Inicial* - [Adriano](https://github.com/AdrianoRAV)
+---
 
+Espero que este README atenda às suas necessidades. Se precisar de mais alguma coisa, estou à disposição!
