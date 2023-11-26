@@ -1,9 +1,8 @@
 # Read_book
 
 Um aplicativo para leitura de eBooks que oferece uma experiência interativa e fácil de usar para os usuários. O aplicativo baixa uma lista de livros e suas capas, exibe as capas em uma estante virtual, permite o download de livros e a leitura dos mesmos.
-
-![Estante Virtual]("https://github.com/AdrianoRAV/read_book/blob/main/assets/app%20(1).jpg" width="300" height="200")
-
+<img src="url_para_imagem_estante_virtual.png" width="300" height="200">
+![Estante Virtual]<img src="https://github.com/AdrianoRAV/read_book/blob/main/assets/app%20(1).jpg" width="300" height="200">
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
