@@ -2,7 +2,7 @@
 
 Um aplicativo para leitura de eBooks que oferece uma experiência interativa e fácil de usar para os usuários. O aplicativo baixa uma lista de livros e suas capas, exibe as capas em uma estante virtual, permite o download de livros e a leitura dos mesmos.
 
-![Estante Virtual](https://github.com/AdrianoRAV/read_book/blob/main/assets/app%20(1).jpg width="300" height="200")
+![Estante Virtual]("https://github.com/AdrianoRAV/read_book/blob/main/assets/app%20(1).jpg" width="300" height="200")
 
 ## 🚀 Começando
 
