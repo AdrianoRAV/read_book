@@ -2,8 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import 'package:read_book/app/presentation/home_page.dart'; // Substitua com o caminho correto para a sua Página Inicial
-
+import 'package:read_book/app/presentation/home_page.dart'; 
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -46,10 +45,3 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-/*
-void main() {
-  runApp(MaterialApp(
-    home: SplashScreen(),
-  ));
-}
-*/
